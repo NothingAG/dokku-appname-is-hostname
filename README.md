@@ -1,9 +1,9 @@
 # Appname is Hostname
 
-This is a dokku micro plugin that override the hostname used by Nginx to be
+This is a dokku micro plugin that overrides the host name used by Nginx to be
 exactly the name of your application.
 
-The full code of the plugin is (in `nginx-hostname` file):
+The full code of the plugin is (in the `nginx-hostname` file):
 
 ```bash
 #!/usr/bin/env bash
@@ -11,7 +11,7 @@ The full code of the plugin is (in `nginx-hostname` file):
 
 set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
 
-# This triggers receive $APP $SUBDOMAIN $VHOST as argument (in this order).
+# This trigger receive $APP $SUBDOMAIN $VHOST as arguments (in this order).
 # Thus $1 contains the name of the app
 echo "$1"
 ```
@@ -26,7 +26,7 @@ $ dokku plugin:install https://github.com/NothingAG/appname-is-hostname
 ## Usage
 
 The plugin does not provide any commands. After installing it, any new app will
-use their application name as the hostname.
+use their application name as the host name.
 
 You will need to rebuild any previous app for the hostname to update.
 
