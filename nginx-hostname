@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Use the name of the app as hostname
+
+set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
+
+# This triggers receive $APP $SUBDOMAIN $VHOST as argument (in this order).
+# Thus $1 contains the name of the app
+echo "$1"

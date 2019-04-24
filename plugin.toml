@@ -1,0 +1,4 @@
+[plugin]
+description = "dokku plugin to use the app name as hostname"
+version = "0.1.0"
+[plugin.config]
